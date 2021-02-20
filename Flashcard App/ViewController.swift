@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func didTapOnFlashcard(_ sender: Any) {
+        questionLabel.isHidden = true;
     }
     
 }
