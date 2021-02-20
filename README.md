@@ -1,7 +1,7 @@
 ## Flashcard App (Lab 1)
 
 ### App Description
-This is an app that dispalys a flashcard with an interesting question. The users can reveal the answer by tapping on the card.
+This is an app that dispalys a flashcard with an interesting question and three multiple choices. The users can reveal the answer by tapping on the bottons.
 
 ### App Walk-though
 ![](https://i.imgur.com/MBRbu6t.gif)
