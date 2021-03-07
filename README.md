@@ -7,7 +7,7 @@
 This is an app that dispalys a flashcard with an interesting question and three multiple choices. The users can reveal the answer by tapping on the bottons. In addition, the users can also tap on the pencil sign to edit the existing flashcard and tap on the plus sign to enter a new question and set of multiple choice answers.
 
 ### App Walk-though
-![](https://i.imgur.com/rfJewqQ.gif)
+![](https://i.imgur.com/c69h6uJ.gif)
 
 
 ## Required
