@@ -63,7 +63,7 @@ class ViewController: UIViewController {
         readSavedFlashcards()
         //if nothing then add initial card
         if flashcards.count == 0 {
-            updateFlashcard(question: "How many degrees can cats rotate their ears?", answer: "180 Degrees", extraAnswerOne: "45 Degrees", extraAnswerTwo: "90 Degrees")
+            updateFlashcard(question: "How many degrees can cats rotate their ears?", answer: "180 Degrees", extraAnswerOne: "45 Degrees", extraAnswerTwo: "90 Degrees", isExisting: true)
         } else {
             updateLabels()
             updateNextPrevButtons()
@@ -98,11 +98,14 @@ class ViewController: UIViewController {
         }
     }
     
-    func updateFlashcard(question: String, answer: String, extraAnswerOne: String?, extraAnswerTwo: String?){
+    func updateFlashcard(question: String, answer: String, extraAnswerOne: String?, extraAnswerTwo: String?, isExisting: Bool){
         //creating a flashcard object
         let flashcard = Flashcard(question: question, answer: answer, extraAnswer1: extraAnswerOne!, extraAnswer2: extraAnswerTwo!)
-        
-        if didAddQuestion == true {
+        if isExisting {
+            flashcards[currentIndex] = flashcard
+            print("🥳 Edited flashcard")
+        } else {
+        //if didAddQuestion == true {
         //adding flashcards into the array
         flashcards.append(flashcard)
         resetButtons()
@@ -113,24 +116,24 @@ class ViewController: UIViewController {
         //updating current index
         currentIndex = flashcards.count - 1
         print("😃 Our current index is \(currentIndex)")
-        
+        }
         //update labels
         updateLabels()
             
-        didAddQuestion = false
-        } else {
-            if flashcards.count == 0 {
-                flashcards.append(flashcard)
-            }
-            //editing existing card
-            questionLabel.text = question
-            answerLable.text = answer
-            button1.setTitle(flashcard.extraAnswer1, for: .normal)
-            button2.setTitle(flashcard.extraAnswer2, for: .normal)
-            button3.setTitle(flashcard.answer, for: .normal)
-            resetButtons()
-            print("🥳 Edited flashcard")
-        }
+//        didAddQuestion = false
+//        } else {
+//            if flashcards.count == 0 {
+//                flashcards.append(flashcard)
+//            }
+//            //editing existing card
+//            questionLabel.text = question
+//            answerLable.text = answer
+//            button1.setTitle(flashcard.extraAnswer1, for: .normal)
+//            button2.setTitle(flashcard.extraAnswer2, for: .normal)
+//            button3.setTitle(flashcard.answer, for: .normal)
+//            resetButtons()
+//            print("🥳 Edited flashcard")
+//        }
         //update next&prev buttons
         updateNextPrevButtons()
     }
@@ -259,6 +262,5 @@ class ViewController: UIViewController {
     //shuffle the card, jump to the beginning to restart, jump to the end.
     //add card in the middle
     //save previous multiple choice actions
-    //save changes on flashcards
 }
 
