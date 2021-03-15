@@ -1,5 +1,26 @@
 # Flashcard App
 
+## Lab 3
+
+### App Description
+This is an app that can display multiple flashcards with questions and three multiple choices. The users can reveal the answer by tapping on the buttons, edit the existing flashcard by tapping on the pencil sign, and add new questions and answers by tapping on the plus sign. All the previously created flashcards are saved so that the users can access them when they re-open the app. The users can also browse through the flashcards and delete a flashcard by tapping on the X sign if needed.
+
+### App Walk-though
+![](https://i.imgur.com/ERdDK5l.gif)
+
+
+## Required
+- [X] User can browse through multiple flashcards
+- [X] User can re-open the app and see previously created flashcards
+- [X] Push code to GitHub
+## Optional
+- [X] User can delete a flashcard
+- [X] User can edit existing flashcard
+- [X] User can store multiple choice questions
+
+
+
+
 
 ## Lab 2
 
