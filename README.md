@@ -40,7 +40,6 @@ This is an app that dispalys a flashcard with an interesting question and three 
 - [x] User gets an error if they try to create a new flashcard with no question or answer
 - [x] User can edit existing flashcard
 - [x] User can add multiple choice answers in the creation screen
-![ezgif com-gif-maker](https://user-images.githubusercontent.com/32988715/111116457-6f7e1d00-853c-11eb-9523-8de968115e30.gif)
 
 
 
