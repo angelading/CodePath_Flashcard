@@ -71,16 +71,35 @@ class ViewController: UIViewController {
     }
 
       @IBAction func didTapOnFlashcard(_ sender: Any) {
-          if questionLabel.isHidden == false {
-              questionLabel.isHidden = true
-              answerLable.isHidden = false
-          } else if questionLabel.isHidden == true {
-              questionLabel.isHidden = false
-              answerLable.isHidden = true
-          }
+        flipFlashcard()
       }
     
-
+    func flipFlashcard() {
+        UIView.transition(with: cardView, duration: 0.3, options: .transitionFlipFromRight, animations:  {
+            if self.questionLabel.isHidden == false {
+                self.questionLabel.isHidden = true
+                self.answerLable.isHidden = false
+            } else if self.questionLabel.isHidden == true {
+                self.questionLabel.isHidden = false
+                self.answerLable.isHidden = true
+            }
+        })
+    }
+    
+    func animateCardOut() {
+        UIView.animate(withDuration: 0.3, animations: {self.cardView.transform = CGAffineTransform.identity.translatedBy(x: -300.00, y: 0.0)}, completion: {finish in
+            self.updateLabels()
+            self.animateCardIn()
+        })
+    }
+    
+    func animateCardIn() {
+        cardView.transform = CGAffineTransform.identity.translatedBy(x: 300.00, y: 0.0)
+        UIView.animate(withDuration: 0.3) {
+            self.cardView.transform = CGAffineTransform.identity
+        }
+    }
+    
     @IBAction func plusQuestion(_ sender: Any) {
         performSegue(withIdentifier: "addQuestion", sender: self)
         didAddQuestion = true
@@ -102,6 +121,9 @@ class ViewController: UIViewController {
         //creating a flashcard object
         let flashcard = Flashcard(question: question, answer: answer, extraAnswer1: extraAnswerOne!, extraAnswer2: extraAnswerTwo!)
         if isExisting {
+            if flashcards.count == 0 {
+                flashcards.append(flashcard)
+            }
             flashcards[currentIndex] = flashcard
             print("🥳 Edited flashcard")
         } else {
@@ -197,6 +219,7 @@ class ViewController: UIViewController {
         updateLabels()
         //update buttons
         updateNextPrevButtons()
+        animateCardIn()
     }
     
     @IBAction func didTapOnNext(_ sender: Any) {
@@ -204,6 +227,7 @@ class ViewController: UIViewController {
         currentIndex = currentIndex + 1
         updateLabels()
         updateNextPrevButtons()
+        animateCardOut()
     }
     
     func saveAllFlashcardsToDisk() {

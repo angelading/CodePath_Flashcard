@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -74,6 +75,9 @@
                                 <state key="normal" title="45 Degrees">
                                     <color key="titleColor" red="0.68466740849999996" green="0.69768917559999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <state key="disabled">
+                                    <color key="titleColor" systemColor="systemGray2Color"/>
+                                </state>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="GZa-ru-ADT" appends="YES" id="51w-ch-Ntp"/>
                                 </connections>
@@ -83,7 +87,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="90 Degrees">
-                                    <color key="titleColor" red="0.68896565980000002" green="0.69875576449999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleColor" red="0.68466740849999996" green="0.69768917559999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" systemColor="systemGray2Color"/>
                                 </state>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="ioS-gT-arv" appends="YES" id="9cz-8x-tJ0"/>
@@ -96,6 +103,9 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="180 Degrees">
                                     <color key="titleColor" red="0.68896565980000002" green="0.69875576449999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" systemColor="systemGray2Color"/>
                                 </state>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="ITc-z4-Vd1" appends="YES" id="NU6-oI-MSo"/>
